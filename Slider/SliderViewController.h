@@ -10,4 +10,10 @@
 
 @interface SliderViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+-(IBAction)valueChanged:(id)sender;
+
 @end
+

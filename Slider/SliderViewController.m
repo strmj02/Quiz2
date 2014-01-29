@@ -8,15 +8,22 @@
 
 #import "SliderViewController.h"
 
-@interface SliderViewController ()
-
-@end
 
 @implementation SliderViewController
+
+-(void)valueChanged:(id)sender
+{
+    float val = [_slider value];
+    NSString *labeltext = [NSString stringWithFormat: @"%f", val];
+    _label.text = labeltext;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    float val = [_slider value];
+    NSString *labeltext = [NSString stringWithFormat: @"%f", val];
+    _label.text = labeltext;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
